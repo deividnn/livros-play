@@ -1,0 +1,27 @@
+
+@main("Welcome to Play") {
+<script type='text/javascript'
+	src='@routes.Assets.at("javascripts/index.js")'></script>
+
+<ul id="Livros">
+</ul>
+
+<form method="POST" action="@routes.LivroController.addLivro()">
+	@helper.CSRF.formField 	
+	<input 	
+			type="text" 
+			name="titulo"
+			placeholder="Titutlo" 
+			maxlength="50"
+			required="required" /><br />
+	@helper.CSRF.formField	
+    <input
+			type="text" 
+			name="autor" 
+			placeholder="Autor"
+			maxlength="50" 
+			required="required" /><br />
+		
+	<button>Add Livro</button>
+</form>
+}

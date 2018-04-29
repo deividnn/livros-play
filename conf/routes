@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+# Home page
+GET     /                           			controllers.LivroController.index()
+GET     /excluir/:id                           	controllers.LivroController.excluir(id:Long)
+GET     /editar/:id                           	controllers.LivroController.editar(id:Long)
+GET     /cadastrar                           	controllers.LivroController.cadastrar()
+POST    /cadastrar                           	controllers.LivroController.adicionarLivro()
+POST    /editar                         		controllers.LivroController.atualizarLivro()
+POST    /                              			controllers.LivroController.pesquisarLivro()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

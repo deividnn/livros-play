@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\livros\app\views\index.scala.html:2:3: package views.html.livros is not a value[0m
+[0m[[0m[31merror[0m] [0m[0m@(livros:List[Livro])[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\livros\app\views\index.scala.html:37:15: object map is not a member of package views.html.livros[0m
+[0m[[0m[31merror[0m] [0m[0m		@for(livro<-livros){[0m
+[0m[[0m[31merror[0m] [0m[0m		            ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

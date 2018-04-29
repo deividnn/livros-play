@@ -1,0 +1,8 @@
+
+# Home page
+GET     /                          controllers.LivroController.index()
+POST    /livro                     controllers.LivroController.addLivro()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

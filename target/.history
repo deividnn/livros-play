@@ -1,0 +1,18 @@
+run
+eclipse
+run
+cls
+run
+compile
+run
+compile
+run
+compile
+eclipse
+compile
+eclipse
+run
+~run
+run -jvm-debug 9999
+run -jvm-debug 9998
+run -jvm-debug 9100
