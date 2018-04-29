@@ -31,34 +31,27 @@ object cadastrar extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
 
 
 Seq[Any](_display_(/*1.3*/layout("Cadastrar Livro")/*1.28*/{_display_(Seq[Any](format.raw/*1.29*/("""
-"""),format.raw/*2.1*/("""<html>
-<head>
-<title>Cadastrar Livro</title>
-</head>
-<body>
-	<h1>Cadastrar Livro</h1>
-	
-	<form method="POST" action=""""),_display_(/*9.31*/routes/*9.37*/.LivroController.adicionarLivro()),format.raw/*9.70*/("""">
+"""),format.raw/*2.1*/("""<h1>Cadastrar Livro</h1>
 
-		<div class="form-group">
-			<label for="titulo">Titulo:</label> """),_display_(/*12.41*/helper/*12.47*/.CSRF.formField),format.raw/*12.62*/(""" """),format.raw/*12.63*/("""<input
-				type="text" name="titulo" required="required" placeholder="Titutlo"
-				autofocus="true" class="form-control" size="30" maxlength="50" />
-		</div>
-		<div class="form-group">
-			<label for="autor">Autor:</label> """),_display_(/*17.39*/helper/*17.45*/.CSRF.formField),format.raw/*17.60*/(""" """),format.raw/*17.61*/("""<input
-				type="text" name="autor" required="required" placeholder="Autor"
-				class="form-control" size="30" maxlength="50" />
-		</div>
-		<button class="btn btn-primary" >Adicionar Livro</button>
-	</form>
-	<br />
-	<p>
-		<a href="/" class="btn btn-danger">Voltar</a>
-	</p>
-</body>
-</html>
-""")))}),format.raw/*29.2*/("""
+<form method="POST" action=""""),_display_(/*4.30*/routes/*4.36*/.LivroController.adicionarLivro()),format.raw/*4.69*/("""">
+
+	<div class="form-group">
+		<label for="titulo">Titulo:</label> """),_display_(/*7.40*/helper/*7.46*/.CSRF.formField),format.raw/*7.61*/(""" """),format.raw/*7.62*/("""<input
+			type="text" name="titulo" required="required" placeholder="Titutlo"
+			autofocus="true" class="form-control" size="30" maxlength="50" />
+	</div>
+	<div class="form-group">
+		<label for="autor">Autor:</label> """),_display_(/*12.38*/helper/*12.44*/.CSRF.formField),format.raw/*12.59*/(""" """),format.raw/*12.60*/("""<input
+			type="text" name="autor" required="required" placeholder="Autor"
+			class="form-control" size="30" maxlength="50" />
+	</div>
+	<button class="btn btn-primary">Adicionar Livro</button>
+</form>
+<br />
+<p>
+	<a href="/" class="btn btn-danger">Voltar</a>
+</p>
+""")))}),format.raw/*22.2*/("""
 """))
       }
     }
@@ -75,11 +68,11 @@ Seq[Any](_display_(/*1.3*/layout("Cadastrar Livro")/*1.28*/{_display_(Seq[Any](f
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 29 13:45:40 BRT 2018
-                  SOURCE: C:/livros/app/views/cadastrar.scala.html
-                  HASH: 5439212b3fcfc96650bb9141456bc54d3dd84118
-                  MATRIX: 1034->2|1067->27|1105->28|1133->30|1284->155|1298->161|1351->194|1452->268|1467->274|1503->289|1532->290|1787->518|1802->524|1838->539|1867->540|2200->843
-                  LINES: 33->1|33->1|33->1|34->2|41->9|41->9|41->9|44->12|44->12|44->12|44->12|49->17|49->17|49->17|49->17|61->29
+                  DATE: Sun Apr 29 14:52:50 BRT 2018
+                  SOURCE: C:/Users/deivid/Documents/GitHub/livros-play/app/views/cadastrar.scala.html
+                  HASH: 7b9eae5d7cb14bb767cc482f61cb30556a621d4e
+                  MATRIX: 1034->2|1067->27|1105->28|1133->30|1216->87|1230->93|1283->126|1381->198|1395->204|1430->219|1458->220|1708->443|1723->449|1759->464|1788->465|2093->740
+                  LINES: 33->1|33->1|33->1|34->2|36->4|36->4|36->4|39->7|39->7|39->7|39->7|44->12|44->12|44->12|44->12|54->22
                   -- GENERATED --
               */
           

@@ -31,39 +31,32 @@ object editar extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
 
 
 Seq[Any](format.raw/*1.15*/(""" """),_display_(/*1.17*/layout("Atualizar Livro")/*1.42*/{_display_(Seq[Any](format.raw/*1.43*/("""
-"""),format.raw/*2.1*/("""<html>
-<head>
-<title>Atualizar Livro</title>
-</head>
-<body>
-	<h1>Atualizar Livro</h1>
-	<form method="POST" action=""""),_display_(/*8.31*/routes/*8.37*/.LivroController.atualizarLivro()),format.raw/*8.70*/("""">
-		<div class="form-group">
-			<label for="idc">Codigo:</label> """),_display_(/*10.38*/helper/*10.44*/.CSRF.formField),format.raw/*10.59*/(""" """),format.raw/*10.60*/("""<input
-				type="text" name="idc" placeholder="Codigo" disabled="disabled"
-				class="form-control" value='"""),_display_(/*12.34*/livro/*12.39*/.id),format.raw/*12.42*/("""' size="10" /> <input
-				type="hidden" name="id" value='"""),_display_(/*13.37*/livro/*13.42*/.id),format.raw/*13.45*/("""' />
-		</div>
-		<div class="form-group">
-			<label for="titulo">Titulo:</label> """),_display_(/*16.41*/helper/*16.47*/.CSRF.formField),format.raw/*16.62*/(""" """),format.raw/*16.63*/("""<input
-				type="text" name="titulo" required="required" placeholder="Titutlo"
-				autofocus="true" value='"""),_display_(/*18.30*/livro/*18.35*/.titulo),format.raw/*18.42*/("""' class="form-control"
-				size="30" maxlength="50" />
-		</div>
-		<div class="form-group">
-			<label for="autor">Autor:</label> """),_display_(/*22.39*/helper/*22.45*/.CSRF.formField),format.raw/*22.60*/(""" """),format.raw/*22.61*/("""<input
-				type="text" name="autor" required="required" placeholder="Autor"
-				value='"""),_display_(/*24.13*/livro/*24.18*/.autor),format.raw/*24.24*/("""' class="form-control" size="30" maxlength="50" />
-		</div>
-		<button class="btn btn-primary">Atualizar Livro</button>
-	</form>
-	<br />
-	<p>
-		<a href="/" class="btn btn-danger">Voltar</a>
-	</p>
-</body>
-</html>
-""")))}),format.raw/*34.2*/("""
+"""),format.raw/*2.1*/("""<h1>Atualizar Livro</h1>
+<form method="POST" action=""""),_display_(/*3.30*/routes/*3.36*/.LivroController.atualizarLivro()),format.raw/*3.69*/("""">
+	<div class="form-group">
+		<label for="idc">Codigo:</label> """),_display_(/*5.37*/helper/*5.43*/.CSRF.formField),format.raw/*5.58*/(""" """),format.raw/*5.59*/("""<input
+			type="text" name="idc" placeholder="Codigo" disabled="disabled"
+			class="form-control" value='"""),_display_(/*7.33*/livro/*7.38*/.id),format.raw/*7.41*/("""' size="10" /> <input
+			type="hidden" name="id" value='"""),_display_(/*8.36*/livro/*8.41*/.id),format.raw/*8.44*/("""' />
+	</div>
+	<div class="form-group">
+		<label for="titulo">Titulo:</label> """),_display_(/*11.40*/helper/*11.46*/.CSRF.formField),format.raw/*11.61*/(""" """),format.raw/*11.62*/("""<input
+			type="text" name="titulo" required="required" placeholder="Titutlo"
+			autofocus="true" value='"""),_display_(/*13.29*/livro/*13.34*/.titulo),format.raw/*13.41*/("""' class="form-control" size="30"
+			maxlength="50" />
+	</div>
+	<div class="form-group">
+		<label for="autor">Autor:</label> """),_display_(/*17.38*/helper/*17.44*/.CSRF.formField),format.raw/*17.59*/(""" """),format.raw/*17.60*/("""<input
+			type="text" name="autor" required="required" placeholder="Autor"
+			value='"""),_display_(/*19.12*/livro/*19.17*/.autor),format.raw/*19.23*/("""' class="form-control" size="30" maxlength="50" />
+	</div>
+	<button class="btn btn-primary">Atualizar Livro</button>
+</form>
+<br />
+<p>
+	<a href="/" class="btn btn-danger">Voltar</a>
+</p>
+""")))}),format.raw/*27.2*/("""
 """))
       }
     }
@@ -80,11 +73,11 @@ Seq[Any](format.raw/*1.15*/(""" """),_display_(/*1.17*/layout("Atualizar Livro")
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 29 13:49:55 BRT 2018
-                  SOURCE: C:/livros/app/views/editar.scala.html
-                  HASH: d0eee7bba2afca7810261ed7e809025ad81ead8e
-                  MATRIX: 948->1|1056->14|1084->16|1117->41|1155->42|1183->44|1331->166|1345->172|1398->205|1494->274|1509->280|1545->295|1574->296|1711->406|1725->411|1749->414|1835->473|1849->478|1873->481|1984->565|1999->571|2035->586|2064->587|2201->697|2215->702|2243->709|2403->842|2418->848|2454->863|2483->864|2600->954|2614->959|2641->965|2893->1187
-                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|40->8|40->8|40->8|42->10|42->10|42->10|42->10|44->12|44->12|44->12|45->13|45->13|45->13|48->16|48->16|48->16|48->16|50->18|50->18|50->18|54->22|54->22|54->22|54->22|56->24|56->24|56->24|66->34
+                  DATE: Sun Apr 29 14:52:50 BRT 2018
+                  SOURCE: C:/Users/deivid/Documents/GitHub/livros-play/app/views/editar.scala.html
+                  HASH: 1bb46a6d9bea5cb4d864bbc4f2519138456a4cdd
+                  MATRIX: 948->1|1056->14|1084->16|1117->41|1155->42|1183->44|1264->99|1278->105|1331->138|1424->205|1438->211|1473->226|1501->227|1635->335|1648->340|1671->343|1755->401|1768->406|1791->409|1899->490|1914->496|1950->511|1979->512|2114->620|2128->625|2156->632|2312->761|2327->767|2363->782|2392->783|2507->871|2521->876|2548->882|2775->1079
+                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|35->3|35->3|35->3|37->5|37->5|37->5|37->5|39->7|39->7|39->7|40->8|40->8|40->8|43->11|43->11|43->11|43->11|45->13|45->13|45->13|49->17|49->17|49->17|49->17|51->19|51->19|51->19|59->27
                   -- GENERATED --
               */
           

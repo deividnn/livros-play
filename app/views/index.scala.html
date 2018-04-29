@@ -1,49 +1,34 @@
 @(livros:List[Livro]) @layout("Lista de Livros"){
-<html>
-<head>
-<title>Lista de Livros</title>
-</head>
-<body>
-	<h1>Lista de Livros</h1>
-	<p>
-		<a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a>
-	</p>
-
-	<form method="POST" action="@routes.LivroController.pesquisarLivro()"
-		class="form-inline">
-
-		<div class="form-group">
-
-			@helper.CSRF.formField <input type="text" name="valor"
-				placeholder="Pesquisar titulo e autor" autofocus="true"
-				class="form-control" size="50" />
-
-		</div>
-
-		<button class="btn btn-primary">Pesquisar Livro</button>
-	</form>
-
-	<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">Codigo</th>
-				<th scope="col">Titulo</th>
-				<th scope="col">Autor</th>
-				<th scope="col"></th>
-				<th scope="col"></th>
-			</tr>
-		</thead>
-		@for(livro<-livros){
+<h1>Lista de Livros</h1>
+<p><a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a></p>
+<form method="POST" action="@routes.LivroController.pesquisarLivro()"
+	class="form-inline">
+	<div class="form-group">
+		@helper.CSRF.formField <input type="text" name="valor"
+			placeholder="Pesquisar titulo e autor" autofocus="true"
+			class="form-control" size="50" />
+	</div>
+	<button class="btn btn-primary">Pesquisar Livro</button>
+</form>
+<table class="table">
+	<thead>
 		<tr>
-			<td>@livro.id</td>
-			<td>@livro.titulo</td>
-			<td>@livro.autor</td>
-			<td><a href="excluir/@livro.id" class="btn btn-danger btn-sm"
-				class="confirmation">excluir</a></td>
-			<td><a href="editar/@livro.id" class="btn btn-warning btn-sm">editar</a></td>
+			<th scope="col">Codigo</th>
+			<th scope="col">Titulo</th>
+			<th scope="col">Autor</th>
+			<th scope="col"></th>
+			<th scope="col"></th>
 		</tr>
-		}
-	</table>
-</body>
-</html>
+	</thead>
+	@for(livro<-livros){
+	<tr>
+		<td>@livro.id</td>
+		<td>@livro.titulo</td>
+		<td>@livro.autor</td>
+		<td><a href="excluir/@livro.id" class="btn btn-danger btn-sm"
+			class="confirmation">excluir</a></td>
+		<td><a href="editar/@livro.id" class="btn btn-warning btn-sm">editar</a></td>
+	</tr>
+	}
+</table>
 }

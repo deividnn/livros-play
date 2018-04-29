@@ -31,54 +31,39 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 
 Seq[Any](format.raw/*1.22*/(""" """),_display_(/*1.24*/layout("Lista de Livros")/*1.49*/{_display_(Seq[Any](format.raw/*1.50*/("""
-"""),format.raw/*2.1*/("""<html>
-<head>
-<title>Lista de Livros</title>
-</head>
-<body>
-	<h1>Lista de Livros</h1>
-	<p>
-		<a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a>
-	</p>
-
-	<form method="POST" action=""""),_display_(/*12.31*/routes/*12.37*/.LivroController.pesquisarLivro()),format.raw/*12.70*/(""""
-		class="form-inline">
-
-		<div class="form-group">
-
-			"""),_display_(/*17.5*/helper/*17.11*/.CSRF.formField),format.raw/*17.26*/(""" """),format.raw/*17.27*/("""<input type="text" name="valor"
-				placeholder="Pesquisar titulo e autor" autofocus="true"
-				class="form-control" size="50" />
-
-		</div>
-
-		<button class="btn btn-primary">Pesquisar Livro</button>
-	</form>
-
-	<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">Codigo</th>
-				<th scope="col">Titulo</th>
-				<th scope="col">Autor</th>
-				<th scope="col"></th>
-				<th scope="col"></th>
-			</tr>
-		</thead>
-		"""),_display_(/*36.4*/for(livro<-livros) yield /*36.22*/{_display_(Seq[Any](format.raw/*36.23*/("""
-		"""),format.raw/*37.3*/("""<tr>
-			<td>"""),_display_(/*38.9*/livro/*38.14*/.id),format.raw/*38.17*/("""</td>
-			<td>"""),_display_(/*39.9*/livro/*39.14*/.titulo),format.raw/*39.21*/("""</td>
-			<td>"""),_display_(/*40.9*/livro/*40.14*/.autor),format.raw/*40.20*/("""</td>
-			<td><a href="excluir/"""),_display_(/*41.26*/livro/*41.31*/.id),format.raw/*41.34*/("""" class="btn btn-danger btn-sm"
-				class="confirmation">excluir</a></td>
-			<td><a href="editar/"""),_display_(/*43.25*/livro/*43.30*/.id),format.raw/*43.33*/("""" class="btn btn-warning btn-sm">editar</a></td>
+"""),format.raw/*2.1*/("""<h1>Lista de Livros</h1>
+<p><a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a></p>
+<form method="POST" action=""""),_display_(/*4.30*/routes/*4.36*/.LivroController.pesquisarLivro()),format.raw/*4.69*/(""""
+	class="form-inline">
+	<div class="form-group">
+		"""),_display_(/*7.4*/helper/*7.10*/.CSRF.formField),format.raw/*7.25*/(""" """),format.raw/*7.26*/("""<input type="text" name="valor"
+			placeholder="Pesquisar titulo e autor" autofocus="true"
+			class="form-control" size="50" />
+	</div>
+	<button class="btn btn-primary">Pesquisar Livro</button>
+</form>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Codigo</th>
+			<th scope="col">Titulo</th>
+			<th scope="col">Autor</th>
+			<th scope="col"></th>
+			<th scope="col"></th>
 		</tr>
-		""")))}),format.raw/*45.4*/("""
-	"""),format.raw/*46.2*/("""</table>
-</body>
-</html>
-""")))}),format.raw/*49.2*/("""
+	</thead>
+	"""),_display_(/*23.3*/for(livro<-livros) yield /*23.21*/{_display_(Seq[Any](format.raw/*23.22*/("""
+	"""),format.raw/*24.2*/("""<tr>
+		<td>"""),_display_(/*25.8*/livro/*25.13*/.id),format.raw/*25.16*/("""</td>
+		<td>"""),_display_(/*26.8*/livro/*26.13*/.titulo),format.raw/*26.20*/("""</td>
+		<td>"""),_display_(/*27.8*/livro/*27.13*/.autor),format.raw/*27.19*/("""</td>
+		<td><a href="excluir/"""),_display_(/*28.25*/livro/*28.30*/.id),format.raw/*28.33*/("""" class="btn btn-danger btn-sm"
+			class="confirmation">excluir</a></td>
+		<td><a href="editar/"""),_display_(/*30.24*/livro/*30.29*/.id),format.raw/*30.32*/("""" class="btn btn-warning btn-sm">editar</a></td>
+	</tr>
+	""")))}),format.raw/*32.3*/("""
+"""),format.raw/*33.1*/("""</table>
+""")))}),format.raw/*34.2*/("""
 """))
       }
     }
@@ -95,11 +80,11 @@ Seq[Any](format.raw/*1.22*/(""" """),_display_(/*1.24*/layout("Lista de Livros")
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 29 13:45:40 BRT 2018
-                  SOURCE: C:/livros/app/views/index.scala.html
-                  HASH: b0254bcef9e0dbf7fb8f815cbb9f21f077e2600f
-                  MATRIX: 953->1|1068->21|1096->23|1129->48|1167->49|1195->51|1426->255|1441->261|1495->294|1584->357|1599->363|1635->378|1664->379|2130->819|2164->837|2203->838|2234->842|2274->856|2288->861|2312->864|2353->879|2367->884|2395->891|2436->906|2450->911|2477->917|2536->949|2550->954|2574->957|2701->1057|2715->1062|2739->1065|2831->1127|2861->1130|2920->1159
-                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|44->12|44->12|44->12|49->17|49->17|49->17|49->17|68->36|68->36|68->36|69->37|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|73->41|73->41|73->41|75->43|75->43|75->43|77->45|78->46|81->49
+                  DATE: Sun Apr 29 14:52:51 BRT 2018
+                  SOURCE: C:/Users/deivid/Documents/GitHub/livros-play/app/views/index.scala.html
+                  HASH: 18293af51ee3a70369f7c60aec66f56bf74c9b56
+                  MATRIX: 953->1|1068->21|1096->23|1129->48|1167->49|1195->51|1348->178|1362->184|1415->217|1496->273|1510->279|1545->294|1573->295|2017->713|2051->731|2090->732|2120->735|2159->748|2173->753|2197->756|2237->770|2251->775|2279->782|2319->796|2333->801|2360->807|2418->838|2432->843|2456->846|2581->944|2595->949|2619->952|2709->1012|2738->1014|2779->1025
+                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|36->4|36->4|36->4|39->7|39->7|39->7|39->7|55->23|55->23|55->23|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|62->30|62->30|62->30|64->32|65->33|66->34
                   -- GENERATED --
               */
           

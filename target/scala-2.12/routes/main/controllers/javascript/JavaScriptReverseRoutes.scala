@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/livros/conf/routes
-// @DATE:Sun Apr 29 11:52:42 BRT 2018
+// @SOURCE:C:/Users/deivid/Documents/GitHub/livros-play/conf/routes
+// @DATE:Sun Apr 29 14:52:50 BRT 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
