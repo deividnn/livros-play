@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/deivid/Documents/GitHub/livros-play/conf/routes
-// @DATE:Sun Apr 29 14:52:50 BRT 2018
+// @SOURCE:C:/livros/conf/routes
+// @DATE:Sun Apr 29 15:03:05 BRT 2018
 
 package router
 

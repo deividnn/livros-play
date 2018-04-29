@@ -16,4 +16,3 @@ run
 run -jvm-debug 9999
 run -jvm-debug 9998
 run -jvm-debug 9100
-run
