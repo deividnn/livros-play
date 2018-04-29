@@ -1,29 +1,22 @@
  @layout("Cadastrar Livro"){
-<html>
-<head>
-<title>Cadastrar Livro</title>
-</head>
-<body>
-	<h1>Cadastrar Livro</h1>
-	
-	<form method="POST" action="@routes.LivroController.adicionarLivro()">
+<h1>Cadastrar Livro</h1>
 
-		<div class="form-group">
-			<label for="titulo">Titulo:</label> @helper.CSRF.formField <input
-				type="text" name="titulo" required="required" placeholder="Titutlo"
-				autofocus="true" class="form-control" size="30" maxlength="50" />
-		</div>
-		<div class="form-group">
-			<label for="autor">Autor:</label> @helper.CSRF.formField <input
-				type="text" name="autor" required="required" placeholder="Autor"
-				class="form-control" size="30" maxlength="50" />
-		</div>
-		<button class="btn btn-primary" >Adicionar Livro</button>
-	</form>
-	<br />
-	<p>
-		<a href="/" class="btn btn-danger">Voltar</a>
-	</p>
-</body>
-</html>
+<form method="POST" action="@routes.LivroController.adicionarLivro()">
+
+	<div class="form-group">
+		<label for="titulo">Titulo:</label> @helper.CSRF.formField <input
+			type="text" name="titulo" required="required" placeholder="Titutlo"
+			autofocus="true" class="form-control" size="30" maxlength="50" />
+	</div>
+	<div class="form-group">
+		<label for="autor">Autor:</label> @helper.CSRF.formField <input
+			type="text" name="autor" required="required" placeholder="Autor"
+			class="form-control" size="30" maxlength="50" />
+	</div>
+	<button class="btn btn-primary">Adicionar Livro</button>
+</form>
+<br />
+<p>
+	<a href="/" class="btn btn-danger">Voltar</a>
+</p>
 }
