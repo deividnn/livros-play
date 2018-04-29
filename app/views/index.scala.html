@@ -1,6 +1,8 @@
 @(livros:List[Livro]) @layout("Lista de Livros"){
 <h1>Lista de Livros</h1>
-<p><a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a></p>
+<p>
+	<a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a>
+</p>
 <form method="POST" action="@routes.LivroController.pesquisarLivro()"
 	class="form-inline">
 	<div class="form-group">
@@ -10,24 +12,26 @@
 	</div>
 	<button class="btn btn-primary">Pesquisar Livro</button>
 </form>
-<table class="table">
-	<thead>
+<div class="table-responsive-md">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Titulo</th>
+				<th scope="col">Autor</th>
+				<th scope="col"></th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		@for(livro<-livros){
 		<tr>
-			<th scope="col">Codigo</th>
-			<th scope="col">Titulo</th>
-			<th scope="col">Autor</th>
-			<th scope="col"></th>
-			<th scope="col"></th>
+			<td>@livro.id</td>
+			<td>@livro.titulo</td>
+			<td>@livro.autor</td>
+			<td><a href="excluir/@livro.id" class="btn btn-danger btn-sm">excluir</a></td>
+			<td><a href="editar/@livro.id" class="btn btn-warning btn-sm">editar</a></td>
 		</tr>
-	</thead>
-	@for(livro<-livros){
-	<tr>
-		<td>@livro.id</td>
-		<td>@livro.titulo</td>
-		<td>@livro.autor</td>
-		<td><a href="excluir/@livro.id" class="btn btn-danger btn-sm">excluir</a></td>
-		<td><a href="editar/@livro.id" class="btn btn-warning btn-sm">editar</a></td>
-	</tr>
-	}
-</table>
+		}
+	</table>
+</div>
 }

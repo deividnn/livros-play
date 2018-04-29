@@ -35,10 +35,10 @@ Seq[Any](format.raw/*1.32*/("""
 
 <head>
 <title>"""),_display_(/*5.9*/title),format.raw/*5.14*/("""</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" media="screen"
 	href='"""),_display_(/*8.9*/routes/*8.15*/.Assets.at("css/bootstrap.min.css")),format.raw/*8.50*/("""'>
-	
+
 </head>
 
 <body>
@@ -49,9 +49,6 @@ Seq[Any](format.raw/*1.32*/("""
 		type="text/javascript"></script>
 	<script src='"""),_display_(/*18.16*/routes/*18.22*/.Assets.at("js/bootstrap.min.js")),format.raw/*18.55*/("""'
 		type="text/javascript"></script>
-	<script type="text/javascript">
-		
-	</script>
 </body>
 
 </html>"""))
@@ -70,10 +67,10 @@ Seq[Any](format.raw/*1.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 29 13:41:29 BRT 2018
+                  DATE: Sun Apr 29 16:27:01 BRT 2018
                   SOURCE: C:/livros/app/views/layout.scala.html
-                  HASH: 4a421dbe12fafeb0bf5f8e492d63029b6ffb6672
-                  MATRIX: 954->1|1079->31|1107->33|1158->59|1183->64|1267->123|1281->129|1336->164|1414->215|1442->222|1496->249|1511->255|1568->291|1649->345|1664->351|1718->384
+                  HASH: b033808d441a38cb810a0b5b70ec9ffd333d108e
+                  MATRIX: 954->1|1079->31|1107->33|1158->59|1183->64|1337->193|1351->199|1406->234|1483->284|1511->291|1565->318|1580->324|1637->360|1718->414|1733->420|1787->453
                   LINES: 28->1|33->1|34->2|37->5|37->5|40->8|40->8|40->8|45->13|45->13|48->16|48->16|48->16|50->18|50->18|50->18
                   -- GENERATED --
               */

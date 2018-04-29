@@ -32,38 +32,41 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 Seq[Any](format.raw/*1.22*/(""" """),_display_(/*1.24*/layout("Lista de Livros")/*1.49*/{_display_(Seq[Any](format.raw/*1.50*/("""
 """),format.raw/*2.1*/("""<h1>Lista de Livros</h1>
-<p><a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a></p>
-<form method="POST" action=""""),_display_(/*4.30*/routes/*4.36*/.LivroController.pesquisarLivro()),format.raw/*4.69*/(""""
+<p>
+	<a href="cadastrar" class="btn btn-primary">Cadastrar Livro</a>
+</p>
+<form method="POST" action=""""),_display_(/*6.30*/routes/*6.36*/.LivroController.pesquisarLivro()),format.raw/*6.69*/(""""
 	class="form-inline">
 	<div class="form-group">
-		"""),_display_(/*7.4*/helper/*7.10*/.CSRF.formField),format.raw/*7.25*/(""" """),format.raw/*7.26*/("""<input type="text" name="valor"
+		"""),_display_(/*9.4*/helper/*9.10*/.CSRF.formField),format.raw/*9.25*/(""" """),format.raw/*9.26*/("""<input type="text" name="valor"
 			placeholder="Pesquisar titulo e autor" autofocus="true"
 			class="form-control" size="50" />
 	</div>
 	<button class="btn btn-primary">Pesquisar Livro</button>
 </form>
-<table class="table">
-	<thead>
-		<tr>
-			<th scope="col">Codigo</th>
-			<th scope="col">Titulo</th>
-			<th scope="col">Autor</th>
-			<th scope="col"></th>
-			<th scope="col"></th>
+<div class="table-responsive-md">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Titulo</th>
+				<th scope="col">Autor</th>
+				<th scope="col"></th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		"""),_display_(/*26.4*/for(livro<-livros) yield /*26.22*/{_display_(Seq[Any](format.raw/*26.23*/("""
+		"""),format.raw/*27.3*/("""<tr>
+			<td>"""),_display_(/*28.9*/livro/*28.14*/.id),format.raw/*28.17*/("""</td>
+			<td>"""),_display_(/*29.9*/livro/*29.14*/.titulo),format.raw/*29.21*/("""</td>
+			<td>"""),_display_(/*30.9*/livro/*30.14*/.autor),format.raw/*30.20*/("""</td>
+			<td><a href="excluir/"""),_display_(/*31.26*/livro/*31.31*/.id),format.raw/*31.34*/("""" class="btn btn-danger btn-sm">excluir</a></td>
+			<td><a href="editar/"""),_display_(/*32.25*/livro/*32.30*/.id),format.raw/*32.33*/("""" class="btn btn-warning btn-sm">editar</a></td>
 		</tr>
-	</thead>
-	"""),_display_(/*23.3*/for(livro<-livros) yield /*23.21*/{_display_(Seq[Any](format.raw/*23.22*/("""
-	"""),format.raw/*24.2*/("""<tr>
-		<td>"""),_display_(/*25.8*/livro/*25.13*/.id),format.raw/*25.16*/("""</td>
-		<td>"""),_display_(/*26.8*/livro/*26.13*/.titulo),format.raw/*26.20*/("""</td>
-		<td>"""),_display_(/*27.8*/livro/*27.13*/.autor),format.raw/*27.19*/("""</td>
-		<td><a href="excluir/"""),_display_(/*28.25*/livro/*28.30*/.id),format.raw/*28.33*/("""" class="btn btn-danger btn-sm"
-			class="confirmation">excluir</a></td>
-		<td><a href="editar/"""),_display_(/*30.24*/livro/*30.29*/.id),format.raw/*30.32*/("""" class="btn btn-warning btn-sm">editar</a></td>
-	</tr>
-	""")))}),format.raw/*32.3*/("""
-"""),format.raw/*33.1*/("""</table>
-""")))}),format.raw/*34.2*/("""
+		""")))}),format.raw/*34.4*/("""
+	"""),format.raw/*35.2*/("""</table>
+</div>
+""")))}),format.raw/*37.2*/("""
 """))
       }
     }
@@ -80,11 +83,11 @@ Seq[Any](format.raw/*1.22*/(""" """),_display_(/*1.24*/layout("Lista de Livros")
 
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 29 15:03:06 BRT 2018
+                  DATE: Sun Apr 29 16:32:03 BRT 2018
                   SOURCE: C:/livros/app/views/index.scala.html
-                  HASH: 18293af51ee3a70369f7c60aec66f56bf74c9b56
-                  MATRIX: 953->1|1068->21|1096->23|1129->48|1167->49|1195->51|1348->178|1362->184|1415->217|1496->273|1510->279|1545->294|1573->295|2017->713|2051->731|2090->732|2120->735|2159->748|2173->753|2197->756|2237->770|2251->775|2279->782|2319->796|2333->801|2360->807|2418->838|2432->843|2456->846|2581->944|2595->949|2619->952|2709->1012|2738->1014|2779->1025
-                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|36->4|36->4|36->4|39->7|39->7|39->7|39->7|55->23|55->23|55->23|56->24|57->25|57->25|57->25|58->26|58->26|58->26|59->27|59->27|59->27|60->28|60->28|60->28|62->30|62->30|62->30|64->32|65->33|66->34
+                  HASH: a2d4e8c26fc2e8003142e343c05af6343b2a0f92
+                  MATRIX: 953->1|1068->21|1096->23|1129->48|1167->49|1195->51|1353->183|1367->189|1420->222|1501->278|1515->284|1550->299|1578->300|2068->764|2102->782|2141->783|2172->787|2212->801|2226->806|2250->809|2291->824|2305->829|2333->836|2374->851|2388->856|2415->862|2474->894|2488->899|2512->902|2613->976|2627->981|2651->984|2743->1046|2773->1049|2822->1068
+                  LINES: 28->1|33->1|33->1|33->1|33->1|34->2|38->6|38->6|38->6|41->9|41->9|41->9|41->9|58->26|58->26|58->26|59->27|60->28|60->28|60->28|61->29|61->29|61->29|62->30|62->30|62->30|63->31|63->31|63->31|64->32|64->32|64->32|66->34|67->35|69->37
                   -- GENERATED --
               */
           
