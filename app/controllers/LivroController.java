@@ -28,7 +28,7 @@ public class LivroController extends Controller {
 	public Result pesquisarLivro() {
 		DynamicForm requestData = formFactory.form().bindFromRequest();
 		String valor = requestData.get("valor");
-		String hql = "select p from Livro p where titulo like '%"+valor+"%' or autor like '%"+valor+"%' ";
+		String hql = "select p from Livro p where titulo like '%" + valor + "%' or autor like '%" + valor + "%' ";
 		List<Livro> livros = jpaLivroRepository.pesquisarPorHql(hql);
 		return ok(views.html.index.render(livros));
 	}
@@ -51,12 +51,18 @@ public class LivroController extends Controller {
 
 	public Result excluir(Long id) {
 		Livro livro = jpaLivroRepository.pesquisarPorId(id);
+		if (livro == null) {
+			return ok(views.html.erro.render());
+		}
 		jpaLivroRepository.excluir(livro);
 		return redirect(routes.LivroController.index());
 	}
 
 	public Result editar(Long id) {
 		Livro livro = jpaLivroRepository.pesquisarPorId(id);
+		if (livro == null) {
+			return ok(views.html.erro.render());
+		}
 		return ok(views.html.editar.render(livro));
 	}
 

@@ -19,7 +19,7 @@ public class JPALivroRepository {
 	public void salvar(Livro livro) {
 		wrap(em -> inserir(em, livro));
 	}
-	
+
 	public void atualizarLivro(Livro livro) {
 		wrap(em -> atualizar(em, livro));
 	}
@@ -37,18 +37,20 @@ public class JPALivroRepository {
 	}
 
 	private Livro pesquisarId(EntityManager em, Long id) {
-		Livro livro = em.createQuery("select p from Livro p where p.id=" + id + " ", 
-				Livro.class).getSingleResult();
-		return livro;
+		try {
+			Livro livro = em.createQuery("select p from Livro p where p.id=" + id + " ", Livro.class).getSingleResult();
+			return livro;
+		} catch (Exception e) {
+			return null;
+		}
 	}
-	
-	public  List<Livro> pesquisarPorHql(String hql) {
+
+	public List<Livro> pesquisarPorHql(String hql) {
 		return wrap(em -> pesquisar(em, hql));
 	}
-	
+
 	private List<Livro> pesquisar(EntityManager em, String hql) {
-		List<Livro> livros= em.createQuery(hql, 
-				Livro.class).getResultList();
+		List<Livro> livros = em.createQuery(hql, Livro.class).getResultList();
 		return livros;
 	}
 
@@ -56,7 +58,7 @@ public class JPALivroRepository {
 		em.persist(livro);
 		return livro;
 	}
-	
+
 	private Livro atualizar(EntityManager em, Livro livro) {
 		em.merge(livro);
 		return livro;
@@ -69,8 +71,7 @@ public class JPALivroRepository {
 	}
 
 	private List<Livro> listar(EntityManager em) {
-		List<Livro> livros = em.createQuery("select p from Livro p order by id desc", Livro.class)
-				.getResultList();
+		List<Livro> livros = em.createQuery("select p from Livro p order by id desc", Livro.class).getResultList();
 		return livros;
 	}
 
